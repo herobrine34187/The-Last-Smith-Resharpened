@@ -2,6 +2,17 @@ package cn.mmf.tls.recipe;
 
 import java.util.stream.Stream;
 
+<<<<<<< HEAD
+import cn.mmf.tls.item.ItemRegistry;
+import cn.mmf.tls.item.ScrollItem;
+import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
+
+import net.minecraft.core.HolderLookup;
+import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.network.codec.ByteBufCodecs;
+import net.minecraft.network.codec.StreamCodec;
+=======
 import com.google.gson.JsonObject;
 
 import net.minecraft.core.RegistryAccess;
@@ -9,10 +20,109 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
+>>>>>>> upstream/1.21.1
 import net.minecraft.world.Container;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.Recipe;
+<<<<<<< HEAD
+import net.minecraft.world.item.crafting.RecipeInput;
+import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.NotNull;
+
+public record TLSResearchRecipe(ItemStack output, Ingredient blade, Ingredient paper,
+                                Ingredient ink) implements Recipe<TLSResearchRecipeInput> {
+
+    @Override
+    public boolean matches(TLSResearchRecipeInput wrapper, @NotNull Level level) {
+        return this.blade.test(wrapper.getItem(TLSResearchRecipeInput.BLADE))
+                && this.paper.test(wrapper.getItem(TLSResearchRecipeInput.PAPER))
+                && this.ink.test(wrapper.getItem(TLSResearchRecipeInput.INK));
+    }
+
+    @Override
+    public boolean isIncomplete() {
+        return Stream.of(this.blade, this.paper, this.ink).anyMatch(Ingredient::isEmpty);
+    }
+
+    @Override
+    public @NotNull ItemStack assemble(@NotNull TLSResearchRecipeInput input, HolderLookup.@NotNull Provider registries) {
+        return this.getResultItem(registries);
+    }
+
+    @Override
+    public boolean canCraftInDimensions(int x, int y) {
+        return x * y >= 3;
+    }
+
+    @Override
+    public @NotNull ItemStack getResultItem(HolderLookup.@NotNull Provider registries) {
+        return this.output;
+    }
+
+    @Override
+    public @NotNull RecipeSerializer<?> getSerializer() {
+        return RecipeSerializerRegistry.RESEARCH_RECIPE_SERIALIZER.get();
+    }
+
+    @Override
+    public @NotNull RecipeType<?> getType() {
+        return RecipeSerializerRegistry.RESEARCH_RECIPE_TYPE.get();
+    }
+
+    public boolean isBladeIngredient(ItemStack stack) {
+        return this.blade.test(stack);
+    }
+
+    public boolean isPaperIngredient(ItemStack stack) {
+        return this.paper.test(stack);
+    }
+
+    public boolean isInkIngredient(ItemStack stack) {
+        return this.ink.test(stack);
+    }
+
+    public static class Serializer implements RecipeSerializer<TLSResearchRecipe> {
+
+        public static final MapCodec<TLSResearchRecipe> CODEC = RecordCodecBuilder.mapCodec(inst -> inst.group(
+                ItemStack.CODEC.fieldOf("output").forGetter(r -> r.output),
+                Ingredient.CODEC.fieldOf("blade").forGetter(r -> r.blade),
+                Ingredient.CODEC.fieldOf("paper").forGetter(r -> r.paper),
+                Ingredient.CODEC.fieldOf("ink").forGetter(r -> r.ink)
+        ).apply(inst, TLSResearchRecipe::new));
+
+        public static final StreamCodec<RegistryFriendlyByteBuf, TLSResearchRecipe> STREAM_CODEC =
+                ByteBufCodecs.fromCodecWithRegistries(CODEC.codec());
+
+        @Override
+        public @NotNull MapCodec<TLSResearchRecipe> codec() {
+            return CODEC;
+        }
+
+        @Override
+        public @NotNull StreamCodec<RegistryFriendlyByteBuf, TLSResearchRecipe> streamCodec() {
+            return STREAM_CODEC;
+        }
+
+    }
+
+    @Override
+    public Ingredient blade() {
+        return blade;
+    }
+
+    @Override
+    public Ingredient paper() {
+        return paper;
+    }
+
+    @Override
+    public Ingredient ink() {
+        return ink;
+    }
+=======
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.item.crafting.ShapedRecipe;
@@ -126,4 +236,5 @@ public class TLSResearchRecipe implements Recipe<Container> {
 			buffer.writeItem(recipe.output);
 		}
 	}
+>>>>>>> upstream/1.21.1
 }

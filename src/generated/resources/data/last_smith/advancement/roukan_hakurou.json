@@ -1,0 +1,59 @@
+{
+  "parent": "last_smith:exorcism_sakura",
+  "criteria": {
+    "hakurouken": {
+      "conditions": {
+        "items": [
+          {
+            "items": "slashblade:slashblade",
+            "predicates": {
+              "slashblade:slashblade": {
+                "requestBlade": {
+                  "name": "last_smith:hakurouken"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "roukanken": {
+      "conditions": {
+        "items": [
+          {
+            "items": "slashblade:slashblade",
+            "predicates": {
+              "slashblade:slashblade": {
+                "requestBlade": {
+                  "name": "last_smith:roukanken"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "translate": "advancement.last_smith.roukan_hakurou.desc"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "slashblade:slashblade"
+    },
+    "title": {
+      "translate": "advancement.last_smith.roukan_hakurou.title"
+    }
+  },
+  "requirements": [
+    [
+      "roukanken",
+      "hakurouken"
+    ]
+  ]
+}

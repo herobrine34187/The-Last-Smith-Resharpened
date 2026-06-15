@@ -146,6 +146,10 @@
 	"slash_art.last_smith.iai_cross": "苇名流「苇名十字斩」",
 	"slash_art.last_smith.sakura_blistering_swords": "樱流「烈风」",
 
+<<<<<<< HEAD
+	"message.last_smith.cauldron_empty": "淬火时炼药锅里需要有水",
+=======
+>>>>>>> upstream/1.21.1
 	"emi.category.last_smith.research": "研究",
 	"emi.category.last_smith.cauldron": "淬火"
 }

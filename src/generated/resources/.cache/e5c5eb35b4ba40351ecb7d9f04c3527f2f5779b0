@@ -1,3 +1,29 @@
+<<<<<<< HEAD
+// 1.21.1	2026-06-15T13:29:22.7003413	Advancements
+b4e1e21353bc8e90ed86e5781b842410533a9556 data/last_smith/advancement/bewitched.json
+79f3de8956e24f3754c35a08ddd610dc2937de06 data/last_smith/advancement/blade.json
+8c3046ad1489d23a913fc1bef03cf3ac414336c0 data/last_smith/advancement/blade_sakura.json
+fc1c8806fb9c9f7ee6ea4d27ddc15a5385d11400 data/last_smith/advancement/exorcism_sakura.json
+572a6370bf30c4871780ee87755b75fbcb955718 data/last_smith/advancement/fushigiri.json
+60d8cb94ccc32081023036d83e5e7addd3a74ae3 data/last_smith/advancement/inferno.json
+0bc67b7f19c6ca2b458f80b6fc445e8172abaf2f data/last_smith/advancement/meteorn.json
+4a71c2634496564b31703371c0ca8e409aab82de data/last_smith/advancement/munin.json
+dec91fb4814e9ec9b62fc455c6e5efcbdc2eb908 data/last_smith/advancement/nagasada.json
+fe848ccb41e4b0451cde91b213325bb3dfcf13ef data/last_smith/advancement/oboro_muramasa.json
+94c2d43c1a59a205a6c84d42dcfca3e84e3581bc data/last_smith/advancement/odachi.json
+aa42fd1f3f3390dc4401423d8b6b61833fe97fbe data/last_smith/advancement/research_table.json
+9b5899f56330eb676647846778a4888097cf33d8 data/last_smith/advancement/root.json
+e72d472a556c5682cb6afc330cc96ea0d499b75a data/last_smith/advancement/roukan_hakurou.json
+25c270c4bedebe31af5e2a7df3f61b2db52f4e49 data/last_smith/advancement/sagequoia.json
+3f837bc47b9ea28e228ba3e180acbc3c6ff7fcf0 data/last_smith/advancement/scrolls.json
+1543f27c1769ba9a8411c734587a72046bd13383 data/last_smith/advancement/scrolls_sakura_full.json
+0390086294697a2a580df61e87cd86d827fb6c83 data/last_smith/advancement/scroll_bamboo.json
+e3f84eecae11f3138034fd7925a8f331beb72994 data/last_smith/advancement/scroll_muramasa.json
+1d642873ea8011f0dffb59e70ac847fb215e0678 data/last_smith/advancement/scroll_named.json
+9fd4d108508852367c63e12e85b277fbd7367f42 data/last_smith/advancement/sharpness.json
+248a5ce4ee074f8def9b1c3a2c64c2de5918560b data/last_smith/advancement/shura.json
+bf49fc1abe74a8141c845cd7370d9e13e158fc8e data/last_smith/advancement/yamato.json
+=======
 // 1.20.1	2026-01-31T12:14:52.8162094	Advancements
 d55e7bf15c321c2def8dc56e8f916aa7ffda3af4 data/last_smith/advancements/bewitched.json
 5b87e91261633d7d6a5fd81bc005994fcfdfd818 data/last_smith/advancements/blade.json
@@ -22,3 +48,4 @@ f02ee575802e6407a4042430fe2fc5c00608fabd data/last_smith/advancements/scroll_nam
 9157bb513366cb1b05f6e0d3995c5f91fab44e8b data/last_smith/advancements/sharpness.json
 2b825fc6325cb55957c0a968804526633aca7d2f data/last_smith/advancements/shura.json
 803339b3a9ff1cb403c63550074009ebc97dadc8 data/last_smith/advancements/yamato.json
+>>>>>>> upstream/1.21.1

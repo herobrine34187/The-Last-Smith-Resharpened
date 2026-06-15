@@ -3,6 +3,12 @@
     "description": {
       "text": "${mod_id} resources"
     },
+<<<<<<< HEAD
+    "pack_format": 34
+  }
+}
+=======
     "pack_format": 15
   }
 }
+>>>>>>> upstream/1.21.1

@@ -161,9 +161,14 @@ public class TLSLangProvider extends AbstractLangProvider {
 		add("slash_art.last_smith.iai_cross", "Ashina Cross");
 		add("slash_art.last_smith.sakura_blistering_swords", "Sakura -Blistering-");
 		
+<<<<<<< HEAD
+		// TODO: addEnchantment - Enchantment is final in 1.21.1
+		
+=======
 		addEnchantment(EnchantmentsRegistry.SPIRIT_SLASH, "Spirit Slash");
 		
 		addEnchantment(EnchantmentsRegistry.SPIRIT_ABSORPTION, "Spirit Absorption");
+>>>>>>> upstream/1.21.1
 
 		addSpecialEffect(TLSSpecialEffectRegistry.EXTRA_POWER.getId(), "Spirit Power");
 		addSpecialEffect(TLSSpecialEffectRegistry.BEWITCHED_POWER.getId(), "Bewitched Power");

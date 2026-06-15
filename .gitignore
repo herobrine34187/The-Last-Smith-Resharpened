@@ -22,5 +22,12 @@ eclipse
 run
 run-data
 
+<<<<<<< HEAD
+# docs
+Documents
+libs
+*.py
+=======
 # Files from Forge MDK
 forge*changelog.txt
+>>>>>>> upstream/1.21.1

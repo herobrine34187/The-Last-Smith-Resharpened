@@ -22,7 +22,11 @@
       "lvl": 4
     },
     {
+<<<<<<< HEAD
+      "id": "minecraft:sweeping_edge",
+=======
       "id": "minecraft:sweeping",
+>>>>>>> upstream/1.21.1
       "lvl": 3
     }
   ],

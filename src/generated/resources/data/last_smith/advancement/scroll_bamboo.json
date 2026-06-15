@@ -1,0 +1,59 @@
+{
+  "parent": "last_smith:scrolls_sakura_full",
+  "criteria": {
+    "bamboo_hermit": {
+      "conditions": {
+        "items": [
+          {
+            "items": "slashblade:slashblade",
+            "predicates": {
+              "slashblade:slashblade": {
+                "requestBlade": {
+                  "name": "last_smith:bamboo_hermit"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "bloody_bamboo": {
+      "conditions": {
+        "items": [
+          {
+            "items": "slashblade:slashblade",
+            "predicates": {
+              "slashblade:slashblade": {
+                "requestBlade": {
+                  "name": "last_smith:silverbamboo_blood"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "translate": "advancement.last_smith.scroll_bamboo.desc"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "slashblade:slashblade"
+    },
+    "title": {
+      "translate": "advancement.last_smith.scroll_bamboo.title"
+    }
+  },
+  "requirements": [
+    [
+      "bamboo_hermit",
+      "bloody_bamboo"
+    ]
+  ]
+}
