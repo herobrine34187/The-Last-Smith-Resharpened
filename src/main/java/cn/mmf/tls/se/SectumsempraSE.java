@@ -1,10 +1,6 @@
 package cn.mmf.tls.se;
 
-<<<<<<< HEAD
 import mods.flammpfeil.slashblade.capability.slashblade.BladeStateAccess;
-=======
-import mods.flammpfeil.slashblade.capability.slashblade.CapabilitySlashBlade;
->>>>>>> upstream/1.21.1
 import mods.flammpfeil.slashblade.capability.slashblade.ISlashBladeState;
 import mods.flammpfeil.slashblade.entity.EntityAbstractSummonedSword;
 import mods.flammpfeil.slashblade.event.SlashBladeEvent;
@@ -18,19 +14,11 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.Vec3;
-<<<<<<< HEAD
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import org.joml.Vector3f;
 
 @EventBusSubscriber(modid = cn.mmf.tls.TheLastSmith.MODID)
-=======
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
-import org.joml.Vector3f;
-
-@EventBusSubscriber
->>>>>>> upstream/1.21.1
 public class SectumsempraSE extends SpecialEffect {
     public static final Vector3f COLOR_WHITE = new Vector3f(1f, 1f, 1f);
     public static final Vector3f COLOR_GREY = new Vector3f(0.25f, 0.25f, 0.25f);
@@ -48,11 +36,7 @@ public class SectumsempraSE extends SpecialEffect {
         EntityAbstractSummonedSword summonedSword = event.getSummonedSword();
         if (summonedSword.getShooter() instanceof ServerPlayer player) {
             ItemStack stack = player.getItemInHand(InteractionHand.MAIN_HAND);
-<<<<<<< HEAD
             BladeStateAccess.of(stack).ifPresent((state) -> {
-=======
-            stack.getCapability(CapabilitySlashBlade.BLADESTATE).ifPresent((state) -> {
->>>>>>> upstream/1.21.1
                 Entity target = event.getTarget();
                 doSectumsempra(state, player, target, summonedSword);
 
@@ -92,55 +76,31 @@ public class SectumsempraSE extends SpecialEffect {
     }
 
     public static void drawParticleCurve(ServerLevel level, Vec3 start, Vec3 end, ParticleOptions particle, int baseDensity) {
-<<<<<<< HEAD
-=======
-        // 起点随机偏移
->>>>>>> upstream/1.21.1
         double startOffsetRange = 2.0d;
         double startX = start.x() + ((level.getRandom().nextDouble() - 0.5d) * startOffsetRange);
         double startY = start.y() + (0.5d + (level.getRandom().nextDouble() - 0.5d) * startOffsetRange);
         double startZ = start.z() + ((level.getRandom().nextDouble() - 0.5d) * startOffsetRange);
 
-<<<<<<< HEAD
-=======
-        // 中点
->>>>>>> upstream/1.21.1
         double midX = (startX + end.x()) / 2.0d;
         double midY = (startY + end.y()) / 2.0d;
         double midZ = (startZ + end.z()) / 2.0d;
 
-<<<<<<< HEAD
-=======
-        // 计算起点到终点的距离
->>>>>>> upstream/1.21.1
         double distance = Math.sqrt(
                 Math.pow(end.x() - startX, 2d) +
                         Math.pow(end.y() - startY, 2d) +
                         Math.pow(end.z() - startZ, 2d)
         );
 
-<<<<<<< HEAD
-=======
-        // 距离越远粒子越多
->>>>>>> upstream/1.21.1
         double distanceFactor = Math.min(distance / 10.0d, 1.0d);
 
         int adjustedDensity = (int) (baseDensity * (0.3d + 0.7d * distanceFactor));
 
-<<<<<<< HEAD
-=======
-        // 距离越近，弯曲度越高
->>>>>>> upstream/1.21.1
         double curvatureFactor = Math.max(2.0d - distanceFactor * 1.8d, 0.1d);
         double maxOffset = distance * curvatureFactor;
         double offsetX = (level.getRandom().nextDouble() - 0.5d) * maxOffset;
         double offsetY = (level.getRandom().nextDouble() - 0.2d) * maxOffset * 0.8d;
         double offsetZ = (level.getRandom().nextDouble() - 0.5d) * maxOffset;
 
-<<<<<<< HEAD
-=======
-        // 控制点
->>>>>>> upstream/1.21.1
         double controlX = midX + offsetX;
         double controlY = midY + offsetY;
         double controlZ = midZ + offsetZ;

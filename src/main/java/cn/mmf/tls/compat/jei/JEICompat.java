@@ -19,23 +19,15 @@ import mezz.jei.api.registration.IRecipeRegistration;
 import mezz.jei.api.registration.IRecipeTransferRegistration;
 import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
-<<<<<<< HEAD
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.item.crafting.RecipeType;
 import org.jetbrains.annotations.NotNull;
-=======
-import net.minecraft.world.Container;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.Recipe;
-import net.minecraft.world.item.crafting.RecipeType;
->>>>>>> upstream/1.21.1
 
 @JeiPlugin
 public class JEICompat implements IModPlugin {
     public static final mezz.jei.api.recipe.RecipeType<TLSResearchRecipe> RESEARCH_JEI_TYPE = mezz.jei.api.recipe.RecipeType
             .create(TheLastSmith.MODID, "research", TLSResearchRecipe.class);
-<<<<<<< HEAD
 
     public static final mezz.jei.api.recipe.RecipeType<TLSCauldronRecipe> CAULDRON_JEI_TYPE = mezz.jei.api.recipe.RecipeType
             .create(TheLastSmith.MODID, "cauldron_recipe", TLSCauldronRecipe.class);
@@ -58,33 +50,12 @@ public class JEICompat implements IModPlugin {
     @Override
     public void registerCategories(IRecipeCategoryRegistration registry) {
         registry.addRecipeCategories(new TLSCauldronRecipeCategory(registry.getJeiHelpers().getGuiHelper()));
-=======
-    
-    public static final mezz.jei.api.recipe.RecipeType<TLSCauldronRecipe> CAULDRON_JEI_TYPE = mezz.jei.api.recipe.RecipeType
-            .create(TheLastSmith.MODID, "cauldron_recipe", TLSCauldronRecipe.class);
-    
-    private static final Minecraft MC = Minecraft.getInstance();
-
-    private static <C extends Container, T extends Recipe<C>> List<T> findRecipesByType(RecipeType<T> type) {
-        return MC.level.getRecipeManager().getAllRecipesFor(type);
-    }
-    
-	@Override
-	public ResourceLocation getPluginUid() {
-		return TheLastSmith.prefix(TheLastSmith.MODID);
-	}
-	
-    @Override
-    public void registerCategories(IRecipeCategoryRegistration registry) {
-    	registry.addRecipeCategories(new TLSCauldronRecipeCategory(registry.getJeiHelpers().getGuiHelper()));
->>>>>>> upstream/1.21.1
         registry.addRecipeCategories(new TLSResearchJEICategory(registry.getJeiHelpers().getGuiHelper()));
     }
 
     @Override
     public void registerRecipes(IRecipeRegistration registration) {
         registration.addRecipes(RESEARCH_JEI_TYPE, findRecipesByType(RecipeSerializerRegistry.RESEARCH_RECIPE_TYPE.get()));
-<<<<<<< HEAD
 
         registration.addRecipes(CAULDRON_JEI_TYPE, List.of(
                 new TLSCauldronRecipe(ItemRegistry.BLADE_SAKURA_UNFINISHED_3.get().getDefaultInstance(), ItemRegistry.BLADE_SAKURA_UNFINISHED_4.get().getDefaultInstance()),
@@ -98,21 +69,6 @@ public class JEICompat implements IModPlugin {
         registration.addRecipeCatalyst(Items.CAULDRON.getDefaultInstance(), CAULDRON_JEI_TYPE);
     }
 
-=======
-        
-        registration.addRecipes(CAULDRON_JEI_TYPE, List.of(
-        		new TLSCauldronRecipe(ItemRegistry.BLADE_SAKURA_UNFINISHED_3.get().getDefaultInstance(), ItemRegistry.BLADE_SAKURA_UNFINISHED_4.get().getDefaultInstance()),
-        		new TLSCauldronRecipe(ItemRegistry.BLADE_UNFINISHED_3.get().getDefaultInstance(), ItemRegistry.BLADE_UNFINISHED_4.get().getDefaultInstance())
-        		));
-    }
-    
-	@Override
-    public void registerRecipeCatalysts(IRecipeCatalystRegistration registration) {
-		registration.addRecipeCatalyst(ItemRegistry.RESEARCH_TABLE.get().getDefaultInstance(), RESEARCH_JEI_TYPE);
-		registration.addRecipeCatalyst(Items.CAULDRON.getDefaultInstance(), CAULDRON_JEI_TYPE);
-    }
-	
->>>>>>> upstream/1.21.1
     @Override
     public void registerGuiHandlers(IGuiHandlerRegistration registration) {
         registration.addRecipeClickArea(ResearchTableScreen.class, 74, 22, 28, 21, RESEARCH_JEI_TYPE);

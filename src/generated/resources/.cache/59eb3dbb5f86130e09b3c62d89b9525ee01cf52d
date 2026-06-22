@@ -1,7 +1,2 @@
-<<<<<<< HEAD
-// 1.21.1	2026-06-15T13:29:22.6973357	Loot Tables
+// 1.21.1	2026-06-23T00:06:30.7274515	Loot Tables
 b299d7a54f6801d79caee4c06b44866c23ef8bbd data/last_smith/loot_table/blocks/research_table.json
-=======
-// 1.20.1	2025-08-26T01:59:04.8797339	Loot Tables
-b299d7a54f6801d79caee4c06b44866c23ef8bbd data/last_smith/loot_tables/blocks/research_table.json
->>>>>>> upstream/1.21.1

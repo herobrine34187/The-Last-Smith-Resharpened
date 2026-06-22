@@ -51,9 +51,6 @@
   "container.last_smith.research.missing_blade_tooltip": "Add the blade or research",
   "container.last_smith.research.missing_ink_tooltip": "Add ink",
   "container.last_smith.research.missing_paper_tooltip": "Add papers or research",
-  "emi.category.last_smith.cauldron": "Cauldron Quenching",
-  "emi.category.last_smith.research": "Researching",
-<<<<<<< HEAD
   "guide.smith_guide.landing_text": "This book records many ancient stories...",
   "guide.smith_guide.subtitle": "The Bewitched Power and The Extreme Sharpness.",
   "guide.smith_guide.title": "The Way of Bewitched Blade",
@@ -62,13 +59,6 @@
   "item.blades_derby.uma_rice_shower": "Rice -Chaser-",
   "item.blades_derby.uma_tachyon": "Tachyon -Lightless-",
   "item.energy_blade.bunshi": "-BunShi-",
-=======
-  "enchantment.last_smith.spirit_absorption": "Spirit Absorption",
-  "enchantment.last_smith.spirit_slash": "Spirit Slash",
-  "guide.smith_guide.landing_text": "This book records many ancient stories...",
-  "guide.smith_guide.subtitle": "The Bewitched Power and The Extreme Sharpness.",
-  "guide.smith_guide.title": "The Way of Bewitched Blade",
->>>>>>> upstream/1.21.1
   "item.last_smith.amagumo_kaze": "Amagumo -Kaze-",
   "item.last_smith.amagumo_kumo": "Amagumo -Kumo-",
   "item.last_smith.amagumo_munin": "Amagumo -Munin-",
@@ -84,10 +74,6 @@
   "item.last_smith.blade_unfinished_2": "Unfinished Blade",
   "item.last_smith.blade_unfinished_3": "Unfinished Blade",
   "item.last_smith.blade_unfinished_4": "Unfinished Blade",
-<<<<<<< HEAD
-=======
-  "item.last_smith.bunshi": "-BunShi-",
->>>>>>> upstream/1.21.1
   "item.last_smith.eievui": "-Eievui-",
   "item.last_smith.evil_kataware": "Evil -Kataware-",
   "item.last_smith.evil_shura": "Evil -Shura-",
@@ -140,13 +126,6 @@
   "item.last_smith.silverbamboo_top": "Top -Silver Bamboo Light-",
   "item.last_smith.slashblade": "SlashBlade--",
   "item.last_smith.sweapon": "SWeapon--",
-<<<<<<< HEAD
-=======
-  "item.last_smith.uma_cafe": "Cafe -Black Skyscraper-",
-  "item.last_smith.uma_digital": "Digital -Superstan-",
-  "item.last_smith.uma_rice_shower": "Rice -Chaser-",
-  "item.last_smith.uma_tachyon": "Tachyon -Lightless-",
->>>>>>> upstream/1.21.1
   "item.last_smith.yakibatsuchi": "Yakibatsuchi",
   "item.last_smith.yamato_neo": "-Yamato-",
   "itemGroup.the_last_smith": "The Last Smith",

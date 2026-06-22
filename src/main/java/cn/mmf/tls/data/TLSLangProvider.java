@@ -4,7 +4,6 @@ import cn.mcmod_mmf.mmlib.data.AbstractLangProvider;
 import cn.mmf.tls.TheLastSmith;
 import cn.mmf.tls.block.BlockRegistry;
 import cn.mmf.tls.data.builtin.TLSSlashBladeRegistry;
-import cn.mmf.tls.enchantments.EnchantmentsRegistry;
 import cn.mmf.tls.item.ItemRegistry;
 import cn.mmf.tls.se.TLSSpecialEffectRegistry;
 import mods.flammpfeil.slashblade.registry.slashblade.SlashBladeDefinition;
@@ -27,10 +26,6 @@ public class TLSLangProvider extends AbstractLangProvider {
 		
 		add("last_smith.jei.cauldron", "Cauldron Quenching");
 		add("last_smith.jei.cauldron_need_water", "Need some water in the cauldron.");
-
-		add("emi.category.last_smith.research", "Researching");
-		add("emi.category.last_smith.cauldron", "Cauldron Quenching");
-
 
 		add("guide.smith_guide.title", "The Way of Bewitched Blade");
 		add("guide.smith_guide.landing_text", "This book records many ancient stories...");
@@ -161,14 +156,8 @@ public class TLSLangProvider extends AbstractLangProvider {
 		add("slash_art.last_smith.iai_cross", "Ashina Cross");
 		add("slash_art.last_smith.sakura_blistering_swords", "Sakura -Blistering-");
 		
-<<<<<<< HEAD
 		// TODO: addEnchantment - Enchantment is final in 1.21.1
 		
-=======
-		addEnchantment(EnchantmentsRegistry.SPIRIT_SLASH, "Spirit Slash");
-		
-		addEnchantment(EnchantmentsRegistry.SPIRIT_ABSORPTION, "Spirit Absorption");
->>>>>>> upstream/1.21.1
 
 		addSpecialEffect(TLSSpecialEffectRegistry.EXTRA_POWER.getId(), "Spirit Power");
 		addSpecialEffect(TLSSpecialEffectRegistry.BEWITCHED_POWER.getId(), "Bewitched Power");

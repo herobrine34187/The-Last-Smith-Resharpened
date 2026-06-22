@@ -6,23 +6,14 @@ import cn.mcmod_mmf.mmlib.data.AbstractItemModelProvider;
 import cn.mmf.tls.TheLastSmith;
 import cn.mmf.tls.item.ItemRegistry;
 import cn.mmf.tls.item.ScrollItem;
-<<<<<<< HEAD
 import net.minecraft.core.registries.BuiltInRegistries;
-=======
->>>>>>> upstream/1.21.1
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-<<<<<<< HEAD
 import net.neoforged.neoforge.client.model.generators.BlockModelBuilder;
 import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
-=======
-import net.minecraftforge.client.model.generators.ItemModelBuilder;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.ForgeRegistries;
->>>>>>> upstream/1.21.1
 
 public class TLSItemModelProvider extends AbstractItemModelProvider {
 
@@ -33,7 +24,6 @@ public class TLSItemModelProvider extends AbstractItemModelProvider {
     @Override
     protected void registerModels() {
         ItemRegistry.ITEMS.getEntries().forEach((item) -> {
-<<<<<<< HEAD
             if (item.get() instanceof ScrollItem)
                 return;
             if (item.get() instanceof BlockItem block) {
@@ -46,16 +36,6 @@ public class TLSItemModelProvider extends AbstractItemModelProvider {
                         modLoc("item/" + BuiltInRegistries.ITEM.getKey(item.get()).getPath()));
         });
 
-=======
-        	if (item.get() instanceof ScrollItem)
-        		return;
-            if (item.get() instanceof BlockItem block)
-                itemBlock(block::getBlock);
-            else
-                normalItem(item);
-        });
-        
->>>>>>> upstream/1.21.1
         normalItem(ItemRegistry.SCROLL_BASIC, TheLastSmith.prefix("scroll"));
         normalItem(ItemRegistry.SCROLL_WOOD_BASIC, TheLastSmith.prefix("scroll"));
         normalItem(ItemRegistry.SCROLL_BLADE, TheLastSmith.prefix("scroll"));
@@ -76,34 +56,19 @@ public class TLSItemModelProvider extends AbstractItemModelProvider {
 
         normalItem(ItemRegistry.SCROLL_BLOOD, TheLastSmith.prefix("scroll_blood"));
         normalItem(ItemRegistry.SCROLL_MORTAL, TheLastSmith.prefix("scroll_blood"));
-<<<<<<< HEAD
 
         normalItem(ItemRegistry.SCROLL_SHARPNESS, TheLastSmith.prefix("scroll_blood"));
         normalItem(ItemRegistry.SCROLL_BEWITCHED, TheLastSmith.prefix("scroll_blood"));
 
         normalItem(ItemRegistry.SCROLL_HEIL, TheLastSmith.prefix("scroll_blood"));
 
-=======
-        
-        normalItem(ItemRegistry.SCROLL_SHARPNESS, TheLastSmith.prefix("scroll_blood"));
-        normalItem(ItemRegistry.SCROLL_BEWITCHED, TheLastSmith.prefix("scroll_blood"));
-        
-        normalItem(ItemRegistry.SCROLL_HEIL, TheLastSmith.prefix("scroll_blood"));
-        
->>>>>>> upstream/1.21.1
         normalItem(ItemRegistry.SCROLL_TENGU_VOL1, TheLastSmith.prefix("scroll"));
         normalItem(ItemRegistry.SCROLL_TENGU_VOL2, TheLastSmith.prefix("scroll"));
         normalItem(ItemRegistry.SCROLL_TENGU_FULL, TheLastSmith.prefix("scroll_double"));
     }
-<<<<<<< HEAD
 
     public ItemModelBuilder normalItem(Supplier<? extends Item> item, ResourceLocation texture) {
         return withExistingParent(BuiltInRegistries.ITEM.getKey(item.get()).getPath(), mcLoc("item/generated")).texture("layer0",
-=======
-    
-    public ItemModelBuilder normalItem(Supplier<? extends Item> item, ResourceLocation texture) {
-        return withExistingParent(ForgeRegistries.ITEMS.getKey(item.get()).getPath(), mcLoc("item/generated")).texture("layer0",
->>>>>>> upstream/1.21.1
                 modLoc("item/" + texture.getPath()));
     }
 }

@@ -141,10 +141,6 @@
 	"se.last_smith.smite_se": "驅魔刃",
 	"slash_art.last_smith.fushigiri": "絕技「不死斬」",
 	"slash_art.last_smith.iai_cross": "葦名流「葦名十字斬」",
-<<<<<<< HEAD
 	"slash_art.last_smith.sakura_blistering_swords": "櫻流「烈風」",
 	"message.last_smith.cauldron_empty": "淬火時鍋裡需要有水"
-=======
-	"slash_art.last_smith.sakura_blistering_swords": "櫻流「烈風」"
->>>>>>> upstream/1.21.1
 }
